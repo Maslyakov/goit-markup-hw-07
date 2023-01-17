@@ -21,7 +21,7 @@ body {
     --taming-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)";
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi)";
 
 h1,
 h2,
@@ -436,38 +436,38 @@ p {
     background-size: cover;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
     .hero {
 background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
     }
 }
 
-@media @retina screen and (min-width: 768px) {
+@media @retina screen and (min-width: 1200px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_desctop@2x.jpg");
     }
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-480px.jpg");
     }
 }
 
-@media @retina screen and (max-width: 480px) {
+@media @retina screen and (max-width: 767px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-480px@2x.jpg");
     }
 }
 
-@media screen and (min-width: 481px) and (max-width:767px) {
+@media screen and (min-width: 768px) and (max-width:1199px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-768px.jpg");
     }
 }
 
-@media @retina screen and (min-width: 481px) and (max-width:767px) {
+@media @retina screen and (min-width: 768px) and (max-width:1199px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-768px@2x.jpg");
     }
@@ -554,7 +554,7 @@ background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 
 
 @media screen and (max-width:427px) {
     .container {
-        width: 320px;
+        max-width: 320px;
         padding-left: 16px;
         padding-right: 16px;
     }
