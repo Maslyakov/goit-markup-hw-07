@@ -21,6 +21,8 @@ body {
     --taming-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)";
+
 h1,
 h2,
 h3,
@@ -429,15 +431,20 @@ p {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office\ .jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-@media (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) {
     .hero {
-        background-image: url("../images/people-office_desctop@2x.jpg");
+background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office.jpg");
+    }
+}
+
+@media @retina screen and (min-width: 768px) {
+    .hero {
+        background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_desctop@2x.jpg");
     }
 }
 
@@ -448,19 +455,19 @@ p {
     }
 }
 
-@media (min-resolution: 2dppx) {
+@media @retina screen and (max-width: 480px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-480px@2x.jpg");
     }
 }
 
-@media screen and (min-width: 768px) and (max-width:960px) {
+@media screen and (min-width: 481px) and (max-width:767px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-768px.jpg");
     }
 }
 
-@media (min-resolution: 2dppx) {
+@media @retina screen and (min-width: 481px) and (max-width:767px) {
     .hero {
         background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/people-office_hero-768px@2x.jpg");
     }
@@ -729,29 +736,6 @@ p {
         flex-direction: column;
     }
 }
-
-/* @media screen and (min-width:428px) and (max-width:767px) {
-
-    .user-list-customers {
-        gap: 72px 0px;
-    }
-
-    
-    /* .user-list-customers>.icons-list-customers:nth-child(n + 5) {
-        margin-bottom: 0;
-    }
-
-    .user-list-customers .list:nth-child(-n+5) {
-        gap: 72px;
-    }
-
-    .user-list-customers .list:nth-child(n+5) {
-        margin-bottom: 0;
-    } */
-} */
-
-
-
 
 .user-icon-svg.list:not(:last-child) {
     margin-right: 24px;
